@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavegacionColaborativa5363922.CambioCliente"
              Title="CambioCliente">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <!--<summary>
+     <createddate> 26/06/2024 </createddate>
+         <company> INSTITUTO NACIONAL CANTON LOURDES </company>
+         <lastmodificationdate> 26/06/2024 </lastmodificationdate>
+         <lastmodificationdescription> Ise la interfaz de la aplicacion donde se pide los datos y se muestran los resultados </lastmodificationdescription>
+         <lastmodifierautor> Daniel Steven López Hernández </lastmodifierautor>
+    </summary>-->
+
+    <StackLayout>
+
+        <!--<sumarry>
+        Colocamos 2 entry donde se digitaria el costo y la cantidad, un boton que aria el calculo 
+        y un label donde se mostraria el cambio que se le dara al cliente y una imagen alusiva al
+        programa
+    </sumarry>-->
+
+        <Label Text="Costo del artículo:" />
+        <Entry x:Name="CostoEntry" Placeholder="Ingrese el costo" />
+
+        <Label Text="Dinero entregado por el cliente:" />
+        <Entry x:Name="DineroEntregadoEntry" Placeholder="Ingrese la cantidad" />
+
+        <Button Text="Calcular Cambio" Clicked="OnCounterClicked" />
+
+        <Label x:Name="ResultadoLabel" />
+
+        <Image Source="cambio.jfif" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Center"
+           HeightRequest="300"
+           WidthRequest="500"/>
+    </StackLayout>
+
 </ContentPage>
