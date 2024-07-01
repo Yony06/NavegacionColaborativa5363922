@@ -2,8 +2,15 @@
 
 namespace NavegacionColaborativa5363922
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class MauiProgram
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();

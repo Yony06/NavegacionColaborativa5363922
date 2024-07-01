@@ -3,12 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavegacionColaborativa5363922.Dinosaurio"
              Title="Dinosaurio">
-    
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <!--
+          Etiqueta que muestra el título de la página.
+      -->
+        <Label Text="Información del Dinosaurio"
+             FontSize="24"
+             HorizontalOptions="Center" />
+
+        <!--
+          Imagen del dinosaurio.
+      -->
+        <Image Source="dinosaurio.png"
+             HeightRequest="200"
+             HorizontalOptions="Center" />
+
+        <!--
+          Campo de entrada para el nombre del dinosaurio.
+      -->
+        <Entry x:Name="DinosaurioNombre"
+             Placeholder="Nombre del dinosaurio" />
+
+        <!--
+          Campo de entrada para el peso del dinosaurio en kilogramos.
+      -->
+        <Entry x:Name="Peso"
+             Placeholder="Peso en kg"
+            />
+
+        <!--
+          Campo de entrada para la altura del dinosaurio en metros.
+      -->
+        <Entry x:Name="Altura"
+             Placeholder="Altura en mts"
+             />
+
+        <!--
+          Botón para calcular el peso y la altura del dinosaurio en otras unidades.
+      -->
+        <Button Text="Calcular"
+              Clicked="Button_Clicked" />
+
+        <!--
+          Etiqueta para mostrar los resultados del cálculo.
+      -->
+        <Label x:Name="ResultLabel"
+             FontSize="18"
+             TextColor="White" />
     </VerticalStackLayout>
 </ContentPage>
