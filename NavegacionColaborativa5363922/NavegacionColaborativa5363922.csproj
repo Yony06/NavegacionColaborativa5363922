@@ -79,6 +79,9 @@
 	  <MauiXaml Update="Gasolinera.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="SurveyDetailsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Triangulo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

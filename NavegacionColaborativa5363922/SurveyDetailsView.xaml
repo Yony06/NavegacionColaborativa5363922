@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavegacionColaborativa5363922.SurveyDetailsView"
+             Title="SurveyDetailsView"
+             BackgroundColor="Black">
+    <!--<summary>
+        <createddate> 30/06/2024 </createddate>
+            <company>INSTITUTO NACIONAL CANTON LOURDES</company>
+            <lastmodificationdate> 30/06/2024 </lastmodificationdate>
+            <lastmodificationdescription> Se creo la interfaz donde se va a llenar la encuesta </lastmodificationdescription>
+            <lastmodifierautor> Andrea  Rocio Pérez Arriola </lastmodifierautor>
+    </summary>-->
+
+    <VerticalStackLayout >
+        <!--Aqui colocamos el titulo-->
+        <Label Text="NUEVA ENCUESTA"
+        FontFamily="Elephant"
+        FontSize="20"
+        HorizontalTextAlignment="Center"
+        Padding="10"/>
+        
+        <!--Colocamos el grid, donde adentro tenemos los espacios que llenaremos-->
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Nombre"/>
+                <Label/>
+                <Entry x:Name="NameEntry" WidthRequest="300" HorizontalOptions="Start"/>
+                <Label/>
+                <Label Text="Fecha de nacimiento"/>
+                <Label/>
+                <DatePicker x:Name="BirthdayPicker"/>
+                <Label/>
+                <Label Text="Equipo favorito"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="FavoriteTeamLabel"/>
+                    <Label/>
+                    <Button Grid.Column="1" Text="..." FontAttributes="Bold" FontSize="12" Clicked="Button_Clicked" BackgroundColor="White" TextColor="Black"/>
+                </Grid>
+            </StackLayout>
+            <Button Grid.Row="1" Text="Aceptar" FontFamily="Cambria" FontSize="12" Clicked="Button_Clicked" WidthRequest="200" BackgroundColor="White" TextColor="Black"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

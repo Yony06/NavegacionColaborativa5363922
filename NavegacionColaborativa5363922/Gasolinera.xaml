@@ -2,11 +2,67 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavegacionColaborativa5363922.Gasolinera"
-             Title="Gasolinera">
+             Title="Gasolinera"
+             BackgroundColor="Black">
+    <!--<summary>
+        <createddate> 27/06/2024 </createddate>
+            <company>INSTITUTO NACIONAL CANTON LOURDES</company>
+            <lastmodificationdate> 27/06/2024 </lastmodificationdate>
+            <lastmodificationdescription> Se creo la interfaz de la aplicacion </lastmodificationdescription>
+            <lastmodifierautor> Andrea  Rocio Pérez Arriola </lastmodifierautor>
+    </summary>-->
+
+    <ScrollView>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
+        <!--Se coloca un label para el titulo-->
+        <Label Text="Gasolineria Texaco" 
+         HorizontalOptions="Center" 
+         VerticalOptions="Center" 
+         FontFamily="Franklin Gothic" 
+         TextColor="White"
+         FontAttributes="Bold"
+         FontSize="Title"/>
+        <Label/>
+
+        <!--Se coloca el entry donde diigitara la cantidad de gaalones que comprara-->
+        <Entry x:Name="GalonesEntry" 
+         Placeholder="Digite la cantidad de galones " 
+         PlaceholderColor="White"
+         TextColor="White"
+         FontAttributes="Bold"
+         HeightRequest="50"
+          WidthRequest="400"
+          BackgroundColor="Transparent"
+         />
+        <Label/>
+        
+        <!--El boton ddonde al dar click convertira los galones a litros y calculara el cobro-->
+        <Button Text="Calcular Pago"  
+           HeightRequest="30"
+           WidthRequest="200"
+           Clicked="OnCounterClicked"
+           BackgroundColor="Black"
+           BorderColor="Red"
+            BorderWidth="1.5"
+           TextColor="LightGray"/>
+        <Label/>
+        
+        <!--El laabel que mostrara la cantidad a pagar-->
+        <Label x:Name="ResultadoLabel" 
+         FontAttributes="Bold"
+         HeightRequest="40"
+          WidthRequest="180"
+          
+        />
+
+        <!-- Se coloca imagen alusiva al algoritmo-->
+        <Image Source="texaco.jpg"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          HeightRequest="200"
+          WidthRequest="500"/>
+
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
