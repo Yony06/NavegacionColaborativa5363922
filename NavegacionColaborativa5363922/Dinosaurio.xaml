@@ -10,15 +10,15 @@
           Etiqueta que muestra el título de la página.
       -->
         <Label Text="Información del Dinosaurio"
-             FontSize="24"
-             HorizontalOptions="Center" />
+     FontSize="24"
+     HorizontalOptions="Center" />
 
         <!--
           Imagen del dinosaurio.
       -->
         <Image Source="dinosaurio.png"
-             HeightRequest="200"
-             HorizontalOptions="Center" />
+     HeightRequest="200"
+     HorizontalOptions="Center" />
 
         <!--
           Campo de entrada para el nombre del dinosaurio.

@@ -23,12 +23,12 @@
     <VerticalStackLayout>
         
         <!--Se le agrega el titulo una imagen y la frase-->
-        <Image Source="bienve.jpg"
-      HeightRequest="100"
-      HorizontalOptions="Center" />
-        <Label/>
-        
-        <Label 
+            <Image Source="bienve.jpg"
+HeightRequest="100"
+HorizontalOptions="Center" />
+            <Label/>
+
+            <Label 
             Text="ACERCA DE NOSOTROS"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
