@@ -58,7 +58,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\dinosaurio.png" />
+		<None Remove="Resources\Images\cambio.jfif" />
+		<None Remove="Resources\Images\superficie.jfif" />
+		<None Remove="Resources\Images\dinosaurio.png" />
 	</ItemGroup>
 
 	<ItemGroup>
