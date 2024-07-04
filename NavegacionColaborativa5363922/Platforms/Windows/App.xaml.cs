@@ -19,6 +19,10 @@ namespace NavegacionColaborativa5363922.WinUI
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
 

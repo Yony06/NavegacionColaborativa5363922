@@ -1,4 +1,6 @@
 
+using Microsoft.Maui.Controls;
+
 namespace NavegacionColaborativa5363922;
 	/// <summary>
 	/// <createddate> 02/07/2024 </createddate> 
@@ -10,10 +12,10 @@ namespace NavegacionColaborativa5363922;
 public partial class SurveyDetailsView : ContentPage
 {
 
-	/// <summary>
-	/// Lista de opciones de equipos que se le mostrara al usuario 
-	/// </summary>
-	private readonly string[] teams =
+    /// <summary>
+    /// Lista de opciones de equipos que se le mostrara al usuario 
+    /// </summary>
+    private readonly string[] teams =
 	{
 		"Alianza Lima",
 		"Amercia",
@@ -33,21 +35,38 @@ public partial class SurveyDetailsView : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
+        if (string.IsNullOrWhiteSpace(NameEntry.Text) || string.IsNullOrWhiteSpace(FavoriteTeamLabel.Text))
+        {
+            return;
+        }
+
+        var newSurvey = new Surveys()
+        {
+            Name = NameEntry.Text,
+            Birthdate = BirthdayPicker.Date,
+            FavoriteTeam = FavoriteTeamLabel.Text
+        };
+
+        MessagingCenter.Send((ContentPage)this,
+            Messages.NewSurveyComplete, newSurvey);
+        await Navigation.PopAsync();
     }
 
-    /// <summary>
-    /// Mostrara un boton donde al tocarlo nos mostrara un listado con los 
+	/// <summary>
+	/// Mostrara un boton donde al tocarlo nos mostrara un listado con los 
 	/// equipos y se ocultara temporalmente el boton al selecionar un equipo
 	/// se mostrara en otro label, ocultara la lista y se volvera a mostrar el boton
-    /// </summary>
-    private async void Button_Clicked_1(object sender, EventArgs e)
-    {
-		var favoriteTeam = await DisplayActionSheet(Literals.FavoriteTEamTitle,null,null,teams);
-		if (!string .IsNullOrWhiteSpace(favoriteTeam))
+	/// </summary>
+	private async void Button_Clicked_1(object sender, EventArgs e)
+	{
+		var favoriteTeam = await DisplayActionSheet(Literals.FavoriteTEamTitle, null,null,teams);
+		if (!string.IsNullOrWhiteSpace(favoriteTeam))
 		{
-            FavoriteTeamLabel.Text = favoriteTeam;
-        }
+			FavoriteTeamLabel.Text = favoriteTeam;
+		}
+
+	
     }
 }

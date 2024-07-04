@@ -17,10 +17,14 @@ public partial class AppSurvey : ContentPage
 	public AppSurvey()
 	{
 		InitializeComponent();
+        MessagingCenter.Subscribe<ContentPage, Surveys>(this, Messages.NewSurveyComplete, (sender, args) =>
+        {
+            SurveysPanel.Children.Add(new Label() { Text = args.ToString() });
+        });
     }
 
     /// <summary>
-    /// Navegacion a la otrra pagina
+    /// Navegacion a la otra pagina
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
