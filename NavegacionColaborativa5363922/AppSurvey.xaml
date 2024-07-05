@@ -22,7 +22,14 @@
                FontSize="20"
                HorizontalTextAlignment="Center"
                Padding="10"/>
-        
+
+        <!-- Se coloca imagen alusiva al algoritmo-->
+        <Image Source="encuesta.png"
+   HorizontalOptions="Center"
+   VerticalOptions="Center"
+   HeightRequest="200"
+   WidthRequest="500"/>
+
         <!--Colocamos un grid donde estaran los elementos para poder acceder a la encuesta-->
         <Grid Margin="10">
             <Grid.RowDefinitions>
